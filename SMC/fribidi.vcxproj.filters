@@ -24,11 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\lib\fribidi.def">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="fribidi-config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
