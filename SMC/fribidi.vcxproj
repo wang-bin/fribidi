@@ -169,41 +169,41 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <TargetName>fribidid</TargetName>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc32\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <TargetName>fribidid</TargetName>
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc64\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <TargetName>fribidi</TargetName>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc32\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <TargetName>fribidi</TargetName>
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc64\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>libfribidid</TargetName>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc32\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>libfribidid</TargetName>
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc64\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>libfribidi</TargetName>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc32\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>libfribidi</TargetName>
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc64\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -225,19 +225,19 @@
     <Lib>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\msvc32\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-if exist $(OutDir)\include\msvc\fribidi (
-rd /s /q $(OutDir)\include\msvc\fribidi
+      <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
 )
-mkdir $(OutDir)\include\msvc\fribidi
-copy ..\lib\fribidi*.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\msvc\fribidi
-copy .\fribidi-config.h $(OutDir)\include\msvc\fribidi
-copy .\lib\fribidi-unicode-version.h $(OutDir)\include\msvc\fribidi
+mkdir $(OutDir)\include\fribidi
+copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\fribidi
+copy .\fribidi-config.h $(OutDir)\include\fribidi
+copy .\lib\fribidi-unicode-version.h $(OutDir)\include\fribidi
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\fribidi.txt</Command>
     </PostBuildEvent>
@@ -284,19 +284,19 @@ del ..\lib\arabic-shaping.tab.i
     <Lib>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\msvc64\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-if exist $(OutDir)\include\msvc\fribidi (
-rd /s /q $(OutDir)\include\msvc\fribidi
+      <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
 )
-mkdir $(OutDir)\include\msvc\fribidi
-copy ..\lib\fribidi*.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\msvc\fribidi
-copy .\fribidi-config.h $(OutDir)\include\msvc\fribidi
-copy .\lib\fribidi-unicode-version.h $(OutDir)\include\msvc\fribidi
+mkdir $(OutDir)\include\fribidi
+copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\fribidi
+copy .\fribidi-config.h $(OutDir)\include\fribidi
+copy .\lib\fribidi-unicode-version.h $(OutDir)\include\fribidi
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\fribidi.txt</Command>
     </PostBuildEvent>
@@ -340,24 +340,24 @@ del ..\lib\arabic-shaping.tab.i
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\bin\msvc32\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\lib\msvc32\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\msvc32\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
-      <ProfileGuidedDatabase>$(OutDir)\bin\msvc32\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-if exist $(OutDir)\include\msvc\fribidi (
-rd /s /q $(OutDir)\include\msvc\fribidi
+      <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
 )
-mkdir $(OutDir)\include\msvc\fribidi
-copy ..\lib\fribidi*.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\msvc\fribidi
-copy .\fribidi-config.h $(OutDir)\include\msvc\fribidi
-copy .\lib\fribidi-unicode-version.h $(OutDir)\include\msvc\fribidi
+mkdir $(OutDir)\include\fribidi
+copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\fribidi
+copy .\fribidi-config.h $(OutDir)\include\fribidi
+copy .\lib\fribidi-unicode-version.h $(OutDir)\include\fribidi
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\fribidi.txt</Command>
     </PostBuildEvent>
@@ -401,24 +401,24 @@ del ..\lib\arabic-shaping.tab.i
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\bin\msvc64\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\lib\msvc64\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\msvc64\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
-      <ProfileGuidedDatabase>$(OutDir)\bin\msvc64\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-if exist $(OutDir)\include\msvc\fribidi (
-rd /s /q $(OutDir)\include\msvc\fribidi
+      <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
 )
-mkdir $(OutDir)\include\msvc\fribidi
-copy ..\lib\fribidi*.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\msvc\fribidi
-copy .\fribidi-config.h $(OutDir)\include\msvc\fribidi
-copy .\lib\fribidi-unicode-version.h $(OutDir)\include\msvc\fribidi
+mkdir $(OutDir)\include\fribidi
+copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\fribidi
+copy .\fribidi-config.h $(OutDir)\include\fribidi
+copy .\lib\fribidi-unicode-version.h $(OutDir)\include\fribidi
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\fribidi.txt</Command>
     </PostBuildEvent>
@@ -479,19 +479,19 @@ del ..\lib\arabic-shaping.tab.i
     </Lib>
     <Lib>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\msvc32\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-if exist $(OutDir)\include\msvc\fribidi (
-rd /s /q $(OutDir)\include\msvc\fribidi
+      <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
 )
-mkdir $(OutDir)\include\msvc\fribidi
-copy ..\lib\fribidi*.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\msvc\fribidi
-copy .\fribidi-config.h $(OutDir)\include\msvc\fribidi
-copy .\lib\fribidi-unicode-version.h $(OutDir)\include\msvc\fribidi
+mkdir $(OutDir)\include\fribidi
+copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\fribidi
+copy .\fribidi-config.h $(OutDir)\include\fribidi
+copy .\lib\fribidi-unicode-version.h $(OutDir)\include\fribidi
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\fribidi.txt</Command>
     </PostBuildEvent>
@@ -552,19 +552,19 @@ del ..\lib\arabic-shaping.tab.i
     </Lib>
     <Lib>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\msvc64\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-if exist $(OutDir)\include\msvc\fribidi (
-rd /s /q $(OutDir)\include\msvc\fribidi
+      <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
 )
-mkdir $(OutDir)\include\msvc\fribidi
-copy ..\lib\fribidi*.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\msvc\fribidi
-copy .\fribidi-config.h $(OutDir)\include\msvc\fribidi
-copy .\lib\fribidi-unicode-version.h $(OutDir)\include\msvc\fribidi
+mkdir $(OutDir)\include\fribidi
+copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\fribidi
+copy .\fribidi-config.h $(OutDir)\include\fribidi
+copy .\lib\fribidi-unicode-version.h $(OutDir)\include\fribidi
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\fribidi.txt</Command>
     </PostBuildEvent>
@@ -620,24 +620,24 @@ del ..\lib\arabic-shaping.tab.i
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\bin\msvc32\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\lib\msvc32\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\msvc32\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
-      <ProfileGuidedDatabase>$(OutDir)\bin\msvc32\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-if exist $(OutDir)\include\msvc\fribidi (
-rd /s /q $(OutDir)\include\msvc\fribidi
+      <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
 )
-mkdir $(OutDir)\include\msvc\fribidi
-copy ..\lib\fribidi*.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\msvc\fribidi
-copy .\fribidi-config.h $(OutDir)\include\msvc\fribidi
-copy .\lib\fribidi-unicode-version.h $(OutDir)\include\msvc\fribidi
+mkdir $(OutDir)\include\fribidi
+copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\fribidi
+copy .\fribidi-config.h $(OutDir)\include\fribidi
+copy .\lib\fribidi-unicode-version.h $(OutDir)\include\fribidi
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\fribidi.txt</Command>
     </PostBuildEvent>
@@ -693,24 +693,24 @@ del ..\lib\arabic-shaping.tab.i
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\bin\msvc64\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\lib\msvc64\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\msvc64\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
-      <ProfileGuidedDatabase>$(OutDir)\bin\msvc64\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-if exist $(OutDir)\include\msvc\fribidi (
-rd /s /q $(OutDir)\include\msvc\fribidi
+      <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
 )
-mkdir $(OutDir)\include\msvc\fribidi
-copy ..\lib\fribidi*.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets.h $(OutDir)\include\msvc\fribidi
-copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\msvc\fribidi
-copy .\fribidi-config.h $(OutDir)\include\msvc\fribidi
-copy .\lib\fribidi-unicode-version.h $(OutDir)\include\msvc\fribidi
+mkdir $(OutDir)\include\fribidi
+copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
+copy ..\charset\fribidi-char-sets-list.h $(OutDir)\include\fribidi
+copy .\fribidi-config.h $(OutDir)\include\fribidi
+copy .\lib\fribidi-unicode-version.h $(OutDir)\include\fribidi
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\fribidi.txt</Command>
     </PostBuildEvent>
