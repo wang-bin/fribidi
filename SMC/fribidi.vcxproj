@@ -167,22 +167,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
-    <TargetName>fribidid</TargetName>
+    <TargetName>libfribidid</TargetName>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <OutDir>..\..\..\msvc32\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
-    <TargetName>fribidid</TargetName>
+    <TargetName>libfribidid</TargetName>
     <OutDir>..\..\..\msvc64\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
-    <TargetName>fribidi</TargetName>
+    <TargetName>libfribidi</TargetName>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <OutDir>..\..\..\msvc32\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
-    <TargetName>fribidi</TargetName>
+    <TargetName>libfribidi</TargetName>
     <OutDir>..\..\..\msvc64\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
@@ -341,8 +341,8 @@ del ..\lib\arabic-shaping.tab.i
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).dll.lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)\lib\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
@@ -402,8 +402,8 @@ del ..\lib\arabic-shaping.tab.i
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).dll.lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)\lib\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
@@ -621,8 +621,8 @@ del ..\lib\arabic-shaping.tab.i
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).dll.lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)\lib\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
@@ -694,8 +694,8 @@ del ..\lib\arabic-shaping.tab.i
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).dll.lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)\lib\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
