@@ -28,9 +28,9 @@ dnl   FRIBIDI_BINARY_AGE = FRIBIDI_INTERFACE_AGE = 0;
 dnl
 m4_define(fribidi_major_version, 0)dnl
 m4_define(fribidi_minor_version, 19)dnl
-m4_define(fribidi_micro_version, 5)dnl
+m4_define(fribidi_micro_version, 6)dnl
 m4_define(fribidi_interface_version, 3)dnl
-m4_define(fribidi_interface_age, 4)dnl
+m4_define(fribidi_interface_age, 5)dnl
 m4_define(fribidi_binary_age, 3)dnl
 dnl
 m4_define(fribidi_version,
@@ -85,6 +85,7 @@ dnl ==========================================================================
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_INSTALL
+PKG_PROG_PKG_CONFIG
 AC_MSG_CHECKING([for native Win32])
   case $build_os in
     mingw*) os_win32=yes ;;
