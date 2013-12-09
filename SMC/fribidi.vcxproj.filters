@@ -180,4 +180,9 @@
       <Filter>Source Files\lib</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="fribidi.def">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
