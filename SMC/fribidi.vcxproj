@@ -232,9 +232,6 @@
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-if exist $(OutDir)\include\fribidi (
-rd /s /q $(OutDir)\include\fribidi
-)
 mkdir $(OutDir)\include\fribidi
 copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
 copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
@@ -265,6 +262,11 @@ del ..\lib\bidi-type.tab.i
 )
 if exist ..\lib\arabic-shaping.tab.i (
 del ..\lib\arabic-shaping.tab.i
+)
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
+cd ../
+cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -291,9 +293,6 @@ del ..\lib\arabic-shaping.tab.i
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-if exist $(OutDir)\include\fribidi (
-rd /s /q $(OutDir)\include\fribidi
-)
 mkdir $(OutDir)\include\fribidi
 copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
 copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
@@ -324,6 +323,11 @@ del ..\lib\bidi-type.tab.i
 )
 if exist ..\lib\arabic-shaping.tab.i (
 del ..\lib\arabic-shaping.tab.i
+)
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
+cd ../
+cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -350,9 +354,6 @@ del ..\lib\arabic-shaping.tab.i
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-if exist $(OutDir)\include\fribidi (
-rd /s /q $(OutDir)\include\fribidi
-)
 mkdir $(OutDir)\include\fribidi
 copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
 copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
@@ -383,6 +384,11 @@ del ..\lib\bidi-type.tab.i
 )
 if exist ..\lib\arabic-shaping.tab.i (
 del ..\lib\arabic-shaping.tab.i
+)
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
+cd ../
+cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -409,9 +415,6 @@ del ..\lib\arabic-shaping.tab.i
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-if exist $(OutDir)\include\fribidi (
-rd /s /q $(OutDir)\include\fribidi
-)
 mkdir $(OutDir)\include\fribidi
 copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
 copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
@@ -442,6 +445,11 @@ del ..\lib\bidi-type.tab.i
 )
 if exist ..\lib\arabic-shaping.tab.i (
 del ..\lib\arabic-shaping.tab.i
+)
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
+cd ../
+cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -482,9 +490,6 @@ del ..\lib\arabic-shaping.tab.i
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-if exist $(OutDir)\include\fribidi (
-rd /s /q $(OutDir)\include\fribidi
-)
 mkdir $(OutDir)\include\fribidi
 copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
 copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
@@ -515,6 +520,11 @@ del ..\lib\bidi-type.tab.i
 )
 if exist ..\lib\arabic-shaping.tab.i (
 del ..\lib\arabic-shaping.tab.i
+)
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
+cd ../
+cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -555,9 +565,6 @@ del ..\lib\arabic-shaping.tab.i
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-if exist $(OutDir)\include\fribidi (
-rd /s /q $(OutDir)\include\fribidi
-)
 mkdir $(OutDir)\include\fribidi
 copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
 copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
@@ -588,6 +595,11 @@ del ..\lib\bidi-type.tab.i
 )
 if exist ..\lib\arabic-shaping.tab.i (
 del ..\lib\arabic-shaping.tab.i
+)
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
+cd ../
+cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -626,9 +638,6 @@ del ..\lib\arabic-shaping.tab.i
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-if exist $(OutDir)\include\fribidi (
-rd /s /q $(OutDir)\include\fribidi
-)
 mkdir $(OutDir)\include\fribidi
 copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
 copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
@@ -659,6 +668,11 @@ del ..\lib\bidi-type.tab.i
 )
 if exist ..\lib\arabic-shaping.tab.i (
 del ..\lib\arabic-shaping.tab.i
+)
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
+cd ../
+cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -697,9 +711,6 @@ del ..\lib\arabic-shaping.tab.i
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
-if exist $(OutDir)\include\fribidi (
-rd /s /q $(OutDir)\include\fribidi
-)
 mkdir $(OutDir)\include\fribidi
 copy ..\lib\fribidi*.h $(OutDir)\include\fribidi
 copy ..\charset\fribidi-char-sets.h $(OutDir)\include\fribidi
@@ -730,6 +741,11 @@ del ..\lib\bidi-type.tab.i
 )
 if exist ..\lib\arabic-shaping.tab.i (
 del ..\lib\arabic-shaping.tab.i
+)
+if exist $(OutDir)\include\fribidi (
+rd /s /q $(OutDir)\include\fribidi
+cd ../
+cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
