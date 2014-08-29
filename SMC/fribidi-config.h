@@ -1,4 +1,4 @@
-/* lib/fribidi-config.h.  Generated from fribidi-config.h.in by configure. */
+/* fribidi-config.h.  Generated from fribidi-config.h.in by SMC. */
 /* Not copyrighted, in public domain. */
 #ifndef FRIBIDI_CONFIG_H
 #define FRIBIDI_CONFIG_H

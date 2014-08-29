@@ -123,6 +123,9 @@
     <ClInclude Include="..\lib\common.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
+    <ClInclude Include="version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\charset\fribidi-char-sets-cap-rtl.c">

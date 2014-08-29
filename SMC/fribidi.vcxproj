@@ -76,6 +76,7 @@
     <ClInclude Include="..\lib\run.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="fribidi-config.h" />
+    <ClInclude Include="version.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\charset\fribidi-char-sets-cap-rtl.c" />

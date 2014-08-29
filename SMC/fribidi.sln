@@ -1,19 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fribidi", "fribidi.vcxproj", "{08091723-A142-478B-A092-20741BA8FAE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pre-build", "pre-build", "{C46846CF-E157-46A4-AFB8-5F71461F789D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gen-arabic-shaping-tab", "gen-arabic-shaping-tab.vcxproj", "{1B4E62F7-3437-48D5-AAB2-CBBE3DE513ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F32B39F-E8A6-4FDE-B70B-1289B05893CB} = {8F32B39F-E8A6-4FDE-B70B-1289B05893CB}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gen-bidi-type-tab", "gen-bidi-type-tab.vcxproj", "{FCB4D49F-6E02-422C-96A0-D9048BD17315}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F32B39F-E8A6-4FDE-B70B-1289B05893CB} = {8F32B39F-E8A6-4FDE-B70B-1289B05893CB}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gen-joining-type-tab", "gen-joining-type-tab.vcxproj", "{986A8C9E-0733-4B48-88AD-5D8E121129ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F32B39F-E8A6-4FDE-B70B-1289B05893CB} = {8F32B39F-E8A6-4FDE-B70B-1289B05893CB}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gen-mirroring-tab", "gen-mirroring-tab.vcxproj", "{71846128-99F1-47CD-9BCA-95106F0803B9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F32B39F-E8A6-4FDE-B70B-1289B05893CB} = {8F32B39F-E8A6-4FDE-B70B-1289B05893CB}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gen-unicode-version", "gen-unicode-version.vcxproj", "{8F32B39F-E8A6-4FDE-B70B-1289B05893CB}"
 EndProject
