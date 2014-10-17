@@ -99,11 +99,11 @@
     <ClCompile Include="..\lib\fribidi.c" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fribidi.def" />
+    <None Include="libfribidi.def" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{08091723-A142-478B-A092-20741BA8FAE2}</ProjectGuid>
-    <RootNamespace>fribidi</RootNamespace>
+    <RootNamespace>libfribidi</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -394,7 +394,7 @@ cd $(ProjectDir)
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>.\fribidi.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\libfribidi.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
@@ -456,7 +456,7 @@ cd $(ProjectDir)
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>.\fribidi.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\libfribidi.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
@@ -833,7 +833,7 @@ cd $(ProjectDir)
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>.\fribidi.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\libfribidi.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
@@ -907,7 +907,7 @@ cd $(ProjectDir)
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>.\fribidi.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\libfribidi.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>

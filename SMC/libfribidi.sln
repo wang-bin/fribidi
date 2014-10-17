@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fribidi", "fribidi.vcxproj", "{08091723-A142-478B-A092-20741BA8FAE2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libfribidi", "libfribidi.vcxproj", "{08091723-A142-478B-A092-20741BA8FAE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pre-build", "pre-build", "{C46846CF-E157-46A4-AFB8-5F71461F789D}"
 EndProject
