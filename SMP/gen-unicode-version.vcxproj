@@ -108,8 +108,8 @@ del ..\lib\fribidi-unicode-version.h
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt gen-unicode-version.c &gt; ..\SMC\lib\fribidi-unicode-version.h
-cd ..\SMC
+gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt gen-unicode-version.c &gt; ..\SMP\lib\fribidi-unicode-version.h
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -142,8 +142,8 @@ del ..\lib\fribidi-unicode-version.h
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt gen-unicode-version.c &gt; ..\SMC\lib\fribidi-unicode-version.h
-cd ..\SMC
+gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt gen-unicode-version.c &gt; ..\SMP\lib\fribidi-unicode-version.h
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -175,8 +175,8 @@ del ..\lib\fribidi-unicode-version.h
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt gen-unicode-version.c &gt; ..\SMC\lib\fribidi-unicode-version.h
-cd ..\SMC
+gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt gen-unicode-version.c &gt; ..\SMP\lib\fribidi-unicode-version.h
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -209,8 +209,8 @@ del ..\lib\fribidi-unicode-version.h
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt gen-unicode-version.c &gt; ..\SMC\lib\fribidi-unicode-version.h
-cd ..\SMC
+gen-unicode-version.exe .\unidata\ReadMe.txt .\unidata\BidiMirroring.txt gen-unicode-version.c &gt; ..\SMP\lib\fribidi-unicode-version.h
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

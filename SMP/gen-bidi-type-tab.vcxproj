@@ -109,8 +109,8 @@ del ..\lib\bidi-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMC\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMC\lib\bidi-type.tab.i
-cd ..\SMC
+gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\bidi-type.tab.i
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -143,8 +143,8 @@ del ..\lib\bidi-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMC\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMC\lib\bidi-type.tab.i
-cd ..\SMC
+gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\bidi-type.tab.i
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -176,8 +176,8 @@ del ..\lib\bidi-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMC\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMC\lib\bidi-type.tab.i
-cd ..\SMC
+gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\bidi-type.tab.i
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -210,8 +210,8 @@ del ..\lib\bidi-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMC\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMC\lib\bidi-type.tab.i
-cd ..\SMC
+gen-bidi-type-tab.exe 2 .\unidata\UnicodeData.txt ..\SMP\lib\fribidi-unicode-version.h gen-bidi-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\bidi-type.tab.i
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

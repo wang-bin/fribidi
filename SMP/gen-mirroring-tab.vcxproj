@@ -109,8 +109,8 @@ del ..\lib\mirroring.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-mirroring-tab.exe 2 .\unidata\BidiMirroring.txt ..\SMC\lib\fribidi-unicode-version.h gen-mirroring-tab.c packtab.c packtab.h &gt; ..\SMC\lib\mirroring.tab.i
-cd ..\SMC
+gen-mirroring-tab.exe 2 .\unidata\BidiMirroring.txt ..\SMP\lib\fribidi-unicode-version.h gen-mirroring-tab.c packtab.c packtab.h &gt; ..\SMP\lib\mirroring.tab.i
+cd ..\SMP
 
 </Command>
     </PostBuildEvent>
@@ -144,8 +144,8 @@ del ..\lib\mirroring.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-mirroring-tab.exe 2 .\unidata\BidiMirroring.txt ..\SMC\lib\fribidi-unicode-version.h gen-mirroring-tab.c packtab.c packtab.h &gt; ..\SMC\lib\mirroring.tab.i
-cd ..\SMC
+gen-mirroring-tab.exe 2 .\unidata\BidiMirroring.txt ..\SMP\lib\fribidi-unicode-version.h gen-mirroring-tab.c packtab.c packtab.h &gt; ..\SMP\lib\mirroring.tab.i
+cd ..\SMP
 
 </Command>
     </PostBuildEvent>
@@ -178,8 +178,8 @@ del ..\lib\mirroring.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-mirroring-tab.exe 2 .\unidata\BidiMirroring.txt ..\SMC\lib\fribidi-unicode-version.h gen-mirroring-tab.c packtab.c packtab.h &gt; ..\SMC\lib\mirroring.tab.i
-cd ..\SMC
+gen-mirroring-tab.exe 2 .\unidata\BidiMirroring.txt ..\SMP\lib\fribidi-unicode-version.h gen-mirroring-tab.c packtab.c packtab.h &gt; ..\SMP\lib\mirroring.tab.i
+cd ..\SMP
 
 </Command>
     </PostBuildEvent>
@@ -213,8 +213,8 @@ del ..\lib\mirroring.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-mirroring-tab.exe 2 .\unidata\BidiMirroring.txt ..\SMC\lib\fribidi-unicode-version.h gen-mirroring-tab.c packtab.c packtab.h &gt; ..\SMC\lib\mirroring.tab.i
-cd ..\SMC
+gen-mirroring-tab.exe 2 .\unidata\BidiMirroring.txt ..\SMP\lib\fribidi-unicode-version.h gen-mirroring-tab.c packtab.c packtab.h &gt; ..\SMP\lib\mirroring.tab.i
+cd ..\SMP
 
 </Command>
     </PostBuildEvent>

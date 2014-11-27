@@ -109,8 +109,8 @@ del ..\lib\joining-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMC\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMC\lib\joining-type.tab.i
-cd ..\SMC
+gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\joining-type.tab.i
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -143,8 +143,8 @@ del ..\lib\joining-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMC\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMC\lib\joining-type.tab.i
-cd ..\SMC
+gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\joining-type.tab.i
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -176,8 +176,8 @@ del ..\lib\joining-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMC\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMC\lib\joining-type.tab.i
-cd ..\SMC
+gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\joining-type.tab.i
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -210,8 +210,8 @@ del ..\lib\joining-type.tab.i
     <PostBuildEvent>
       <Command>mkdir lib
 cd ..\gen.tab
-gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMC\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMC\lib\joining-type.tab.i
-cd ..\SMC
+gen-joining-type-tab.exe 2 .\unidata\UnicodeData.txt .\unidata\ArabicShaping.txt ..\SMP\lib\fribidi-unicode-version.h gen-joining-type-tab.c packtab.c packtab.h &gt; ..\SMP\lib\joining-type.tab.i
+cd ..\SMP
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
