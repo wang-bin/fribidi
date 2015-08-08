@@ -28,9 +28,9 @@ dnl   FRIBIDI_BINARY_AGE = FRIBIDI_INTERFACE_AGE = 0;
 dnl
 m4_define(fribidi_major_version, 0)dnl
 m4_define(fribidi_minor_version, 19)dnl
-m4_define(fribidi_micro_version, 6)dnl
+m4_define(fribidi_micro_version, 7)dnl
 m4_define(fribidi_interface_version, 3)dnl
-m4_define(fribidi_interface_age, 5)dnl
+m4_define(fribidi_interface_age, 6)dnl
 m4_define(fribidi_binary_age, 3)dnl
 dnl
 m4_define(fribidi_version,
@@ -46,9 +46,12 @@ AC_INIT([GNU FriBidi],
 
 AC_CONFIG_SRCDIR([fribidi.pc.in])
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIRS([m4])
 
 AM_INIT_AUTOMAKE([1.11.1 gnits dist-bzip2 no-dist-gzip -Wall no-define])
 AM_SILENT_RULES([yes])
+
+AM_PROG_AR
 
 # Initialize libtool
 LT_PREREQ([2.2])
@@ -152,14 +155,8 @@ else
 fi
 AC_SUBST(FRIBIDI_NO_DEPRECATED)
 
-# --enable-malloc
-AC_ARG_ENABLE(malloc,
-              AC_HELP_STRING([--enable-malloc],
-                             [use simple malloc instead of memory chunks]))
-if test x$enable_malloc = xyes; then
-	AC_DEFINE(USE_SIMPLE_MALLOC,1,
-                  [Define to 1 if you want to use simple mallocs instead of memory chunks])
-fi
+AC_DEFINE(USE_SIMPLE_MALLOC,1,
+	  [Define to 1 if you want to use simple mallocs instead of memory chunks])
 
 # --disable-charsets
 AC_ARG_ENABLE(charsets,
