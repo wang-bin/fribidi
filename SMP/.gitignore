@@ -22,4 +22,5 @@
 *.iobj
 *.ipdb
 .vs/
-!*.i
+*.VC.db
+*.opendb
