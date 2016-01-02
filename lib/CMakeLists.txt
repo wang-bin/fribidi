@@ -1,0 +1,41 @@
+SET(FRIBIDI_SRC
+	arabic-misc.tab.i
+	fribidi.c
+	fribidi-arabic.c
+	fribidi-bidi.c
+	fribidi-bidi-types.c
+	fribidi-deprecated.c
+	fribidi-joining.c
+	fribidi-joining-types.c
+	fribidi-mem.c
+	fribidi-mirroring.c
+	fribidi-run.c
+	fribidi-shape.c
+)
+
+INCLUDE_DIRECTORIES(
+  ${CMAKE_SOURCE_DIR}/SMP
+  ${CMAKE_SOURCE_DIR}/SMP/lib
+  ${CMAKE_SOURCE_DIR}/charset
+  ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+
+ADD_LIBRARY(fribidi_shared SHARED ${FRIBIDI_SRC})
+ADD_LIBRARY(fribidi_static STATIC ${FRIBIDI_SRC})
+SET_TARGET_PROPERTIES(fribidi_shared
+  PROPERTIES VERSION ${PROJECT_VERSION}
+  SOVERSION ${SHARED_LIBRARY_VERSION}
+)
+SET_TARGET_PROPERTIES(fribidi_shared PROPERTIES OUTPUT_NAME "fribidi")
+SET_TARGET_PROPERTIES(fribidi_shared PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+SET_TARGET_PROPERTIES(fribidi_static PROPERTIES OUTPUT_NAME "fribidi")
+SET_TARGET_PROPERTIES(fribidi_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+
+LINK_DIRECTORIES(${CMAKE_SOURCE_DIR}/charset)
+TARGET_LINK_LIBRARIES(fribidi_shared fribidi-charset)
+TARGET_LINK_LIBRARIES(fribidi_static fribidi-charset)
+
+file(GLOB HEADERS "fribidi-*.h" "${CMAKE_SOURCE_DIR}/SMP/lib/fribidi-*.h")
+INSTALL(FILES ${HEADERS} DESTINATION include)
+INSTALL(TARGETS fribidi_shared fribidi_static LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)

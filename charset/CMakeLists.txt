@@ -1,0 +1,12 @@
+
+INCLUDE_DIRECTORIES(
+  ${CMAKE_SOURCE_DIR}/SMP
+  ${CMAKE_SOURCE_DIR}/SMP/lib
+  ${CMAKE_SOURCE_DIR}/lib
+  ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+AUX_SOURCE_DIRECTORY(. SRC_LIST)
+ADD_LIBRARY(fribidi-charset ${SRC_LIST})
+
+INSTALL(FILES fribidi-char-sets.h fribidi-char-sets-list.h DESTINATION include)
