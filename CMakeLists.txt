@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 
 PROJECT(fribidi)
+message(STATUS "TARGET OS: ${CMAKE_SYSTEM_NAME} ${CMAKE_SYSTEM_VERSION} ${CMAKE_SYSTEM_PROCESSOR}")
 
 INCLUDE(CheckIncludeFile)
 INCLUDE(CheckTypeSize)
@@ -14,19 +15,28 @@ set(SO_VERSION ${VERSION_MAJOR})
 OPTION(USE_FRIBIDI_CHARSETS "charset conversion routines" ON)
 
 INCLUDE_DIRECTORIES(
-  ${PROJECT_SOURCE_DIR}/SMP/lib
   ${PROJECT_SOURCE_DIR}/charset
   ${PROJECT_SOURCE_DIR}/lib
+  ${PROJECT_SOURCE_DIR}/gen.tab
   ${PROJECT_BINARY_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 ADD_DEFINITIONS(-DHAVE_CONFIG_H)
+
 ADD_SUBDIRECTORY(lib)
 IF(USE_FRIBIDI_CHARSETS)
   ADD_SUBDIRECTORY(charset)
   ADD_DEPENDENCIES(fribidi_shared fribidi-charset)
   ADD_DEPENDENCIES(fribidi_static fribidi-charset)
+ENDIF()
+IF(NOT CMAKE_CROSSCOMPILING)
+  ADD_SUBDIRECTORY(gen.tab)
+  IF(USE_FRIBIDI_CHARSETS)
+    ADD_DEPENDENCIES(fribidi-charset gen_tab)
+  ENDIF()
+  ADD_DEPENDENCIES(fribidi_shared gen_tab)
+  ADD_DEPENDENCIES(fribidi_static gen_tab)
 ENDIF()
 
 # End configuration
@@ -89,5 +99,3 @@ FOREACH(VAR HAVE_ASM_PAGE_H HAVE_DLFCN_H HAVE_INTTYPES_H HAVE_MEMORY_H HAVE_STDI
 ENDFOREACH()
 # why no #ifndef CONFIG_H?
 file(WRITE "${PROJECT_BINARY_DIR}/config.h" "${CONF}")
-
-
