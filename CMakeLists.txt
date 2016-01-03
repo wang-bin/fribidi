@@ -2,15 +2,68 @@ cmake_minimum_required(VERSION 3.1)
 
 PROJECT(fribidi)
 
-SET(VERSION_MAJOR 1)
+INCLUDE(CheckTypeSize)
+
+SET(VERSION_MAJOR 0)
 SET(VERSION_MINOR 9)
-SET(VERSION_PATCH 7)
-set(PROJECT_VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH})
+SET(VERSION_MICRO 7)
+set(PROJECT_VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_MICRO})
 set(SO_VERSION ${VERSION_MAJOR})
+
+OPTION(USE_FRIBIDI_CHARSETS "charset conversion routines" ON)
+
+INCLUDE_DIRECTORIES(
+  ${PROJECT_SOURCE_DIR}/SMP
+  ${PROJECT_SOURCE_DIR}/SMP/lib
+  ${PROJECT_SOURCE_DIR}/charset
+  ${PROJECT_SOURCE_DIR}/lib
+  ${PROJECT_BINARY_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}
+)
 
 ADD_DEFINITIONS(-DHAVE_CONFIG_H)
 ADD_SUBDIRECTORY(lib)
-ADD_SUBDIRECTORY(charset)
+IF(USE_FRIBIDI_CHARSETS)
+  ADD_SUBDIRECTORY(charset)
+  ADD_DEPENDENCIES(fribidi_shared fribidi-charset)
+  ADD_DEPENDENCIES(fribidi_static fribidi-charset)
+ENDIF()
 
-ADD_DEPENDENCIES(fribidi_shared fribidi-charset)
-ADD_DEPENDENCIES(fribidi_static fribidi-charset)
+# End configuration
+message(STATUS "${PROJECT_BINARY_DIR}")
+
+SET(PACKAGE "fribidi")
+SET(PACKAGE_NAME "GNU Fribidi")
+SET(PACKAGE_BUGREPORT "http://bugs.freedesktop.org/enter_bug.cgi?product=fribidi")
+SET(FRIBIDI_VERSION "${PROJECT_VERSION}")
+SET(FRIBIDI_MAJOR_VERSION "${VERSION_MAJOR}")
+SET(FRIBIDI_MINOR_VERSION "${VERSION_MINOR}")
+SET(FRIBIDI_MICRO_VERSION "${VERSION_MICRO}")
+SET(FRIBIDI_INTERFACE_VERSION 3)
+CHECK_TYPE_SIZE(int SIZEOF_INT) #TODO: 0 for apple multi arch
+
+IF(USE_FRIBIDI_CHARSETS)
+  SET(FRIBIDI_CHARSETS 1)
+ELSE()
+  SET(FRIBIDI_CHARSETS 0)
+ENDIF()
+SET(FRIBIDI_USE_GLIB 0)
+
+CONFIGURE_FILE(
+    "${PROJECT_SOURCE_DIR}/lib/fribidi-config.h.in"
+    "${PROJECT_BINARY_DIR}/fribidi-config.h")
+    
+ 
+# Needed for fribidi.pc.in
+SET(prefix ${CMAKE_INSTALL_PREFIX})
+SET(exec_prefix "\${prefix}")
+SET(libdir "\${exec_prefix}/lib${LIB_SUFFIX}")
+SET(bindir "\${exec_prefix}/bin")
+SET(includedir "\${prefix}/include")
+SET(PACKAGE_VERSION "${PROJECT_VERSION}")
+SET(VERSION "${PROJECT_VERSION}")
+
+CONFIGURE_FILE(
+    "${PROJECT_SOURCE_DIR}/fribidi.pc.in"
+    "${PROJECT_BINARY_DIR}/fribidi.pc"
+    @ONLY)
