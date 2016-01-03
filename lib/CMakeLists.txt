@@ -13,12 +13,16 @@ SET(FRIBIDI_SRC
 	fribidi-shape.c
 )
 
+FILE(READ fribidi.def DEF_CONTENT)
 IF(USE_FRIBIDI_CHARSETS)
+  SET(DEF_CONTENT "fribidi_parse_charset\nfribidi_unicode_to_charset\nfribidi_charset_to_unicode\n${DEF_CONTENT}")
+  FILE(WRITE "${PROJECT_BINARY_DIR}/fribidi.def" "EXPORTS\n${DEF_CONTENT}")
 # $<TARGET_OBJECTS:xxx> can only be used in add_library & add_executable, not in set_target_properties(...link_libraries...)
-  ADD_LIBRARY(fribidi_shared SHARED ${FRIBIDI_SRC} $<TARGET_OBJECTS:fribidi-charset> ${PROJECT_SOURCE_DIR}/SMP/libfribidi.def)
+  ADD_LIBRARY(fribidi_shared SHARED ${FRIBIDI_SRC} $<TARGET_OBJECTS:fribidi-charset> ${PROJECT_BINARY_DIR}/fribidi.def)
   ADD_LIBRARY(fribidi_static STATIC ${FRIBIDI_SRC} $<TARGET_OBJECTS:fribidi-charset>)
 ELSE()
-  ADD_LIBRARY(fribidi_shared SHARED ${FRIBIDI_SRC} ${PROJECT_SOURCE_DIR}/SMP/libfribidi.def)
+  FILE(WRITE "${PROJECT_BINARY_DIR}/fribidi.def" "EXPORTS\n${DEF_CONTENT}")
+  ADD_LIBRARY(fribidi_shared SHARED ${FRIBIDI_SRC} ${PROJECT_BINARY_DIR}/fribidi.def)
   ADD_LIBRARY(fribidi_static STATIC ${FRIBIDI_SRC})
 ENDIF()
 SET_TARGET_PROPERTIES(fribidi_shared
