@@ -46,7 +46,7 @@ ENDIF()
 # End configuration
 message(STATUS "${PROJECT_BINARY_DIR}")
 
-SET(PACKAGE "fribidi")
+SET(PACKAGE "${PROJECT_NAME}")
 SET(PACKAGE_NAME "GNU Fribidi")
 SET(PACKAGE_BUGREPORT "http://bugs.freedesktop.org/enter_bug.cgi?product=fribidi")
 SET(FRIBIDI_VERSION "${PROJECT_VERSION}")
@@ -78,8 +78,8 @@ SET(PACKAGE_VERSION "${PROJECT_VERSION}")
 SET(VERSION "${PROJECT_VERSION}")
 
 CONFIGURE_FILE(
-    "${PROJECT_SOURCE_DIR}/fribidi.pc.in"
-    "${PROJECT_BINARY_DIR}/fribidi.pc"
+    "${PROJECT_SOURCE_DIR}/${PROJECT_NAME}.pc.in"
+    "${PROJECT_BINARY_DIR}/${PROJECT_NAME}.pc"
     @ONLY)
 
 
