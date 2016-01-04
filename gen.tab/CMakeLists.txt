@@ -13,6 +13,9 @@ ADD_DEPENDENCIES(gen-joining-type-tab gen-unicode-version)
 ADD_DEPENDENCIES(gen-arabic-shaping-tab gen-unicode-version)
 ADD_DEPENDENCIES(gen-mirroring-tab gen-unicode-version)
 
+IF(MSVC)
+  ADD_DEFINITIONS(-Dpow=s_pow) #redefinition
+ENDIF()
 # TODO: use OUTPUT instead of TARGET
 add_custom_command(TARGET gen-unicode-version POST_BUILD
   COMMAND gen-unicode-version unidata/ReadMe.txt unidata/BidiMirroring.txt gen-unicode-version.c >fribidi-unicode-version.h
