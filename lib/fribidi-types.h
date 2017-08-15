@@ -53,9 +53,9 @@
 #else /* !FRIBIDI_USE_GLIB */
 # if defined(HAVE_INTTYPES_H) || defined(HAVE_STDINT_H)
 #  ifndef __FRIBIDI_DOC
-#   if HAVE_INTTYPES_H
+#   if (HAVE_INTTYPES_H+0)
 #    include <inttypes.h>
-#   elif HAVE_STDINT_H
+#   elif (HAVE_STDINT_H+0)
 #    include <stdint.h>
 #   endif /* !HAVE_STDINT_H */
 #  endif /* !__FRIBIDI_DOC */
